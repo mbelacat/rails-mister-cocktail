@@ -6,13 +6,11 @@
     <div class="col-12">
     <%= simple_form_for [Cocktail.find(params[:cocktail_id]), @dose] do |f| %>
 
-      <%= f.input : %>
-      <%= f.input : %>
-
+      <%= f.input :description, as: :text%>
+      <%= f.input :ingredient_id, collection: Ingredient.all%>
       <%= f.submit "add a dose", class: "btn btn-primary" %>
 
     <% end %>
     </div>
   </div>
 </div>
-

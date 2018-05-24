@@ -1,0 +1,21 @@
+<h1>Cocktails#index</h1>
+<p>Find me in app/views/cocktails/index.html.erb</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cocktails.each do |cocktail| %>
+
+      <tr>
+        <td><%= cocktail.name %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

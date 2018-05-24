@@ -1,0 +1,18 @@
+<h1>Doses#new</h1>
+<p>Find me in app/views/doses/new.html.erb</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+    <%= simple_form_for [Cocktail.find(params[:cocktail_id]), @dose] do |f| %>
+
+      <%= f.input : %>
+      <%= f.input : %>
+
+      <%= f.submit "add a dose", class: "btn btn-primary" %>
+
+    <% end %>
+    </div>
+  </div>
+</div>
+

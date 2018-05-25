@@ -7,16 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'json'
 require 'open-uri'
-
+puts "destruction des ingredients"
 Ingredient.destroy_all
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_list = open(url).read
 ingredients_attributes = JSON.parse(ingredients_list)
 
+puts "creation des ingredients"
 ingredients_attributes['drinks'].each do |ingredient|
+  Ingredient.create(name: ingredient["strIngredient1"])
 
- p Ingredient.create(name: ingredient["strIngredient1"])
 end
-
+puts "creation des ingredients"
 
